@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Levnadslopp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'OmMig')" id="defaultOpen">Om Mig</button>
+  <button class="tablinks" onclick="openTab(event, 'Erfarenheter')">Erfarenheter</button>
+  <button class="tablinks" onclick="openTab(event, 'Kontakt')">Kontakt</button>
+</div>
+
+<div id="OmMig" class="tabcontent">
+  <h2>Om Mig</h2>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Erfarenheter" class="tabcontent">
+  <h2>Erfarenheter</h2>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Kontakt" class="tabcontent">
+  <h2>Kontakt</h2>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
     
 </body>
 </html>
