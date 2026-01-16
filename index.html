@@ -8,24 +8,31 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'OmMig')" id="defaultOpen">Om Mig</button>
-  <button class="tablinks" onclick="openTab(event, 'Erfarenheter')">Erfarenheter</button>
-  <button class="tablinks" onclick="openTab(event, 'Kontakt')">Kontakt</button>
+<div>
+  <h1 class="title">Om Mig</h1>
 </div>
+<div id="omMig" class="boxcontent">
+    <ul class="aboutList">
+      <li>Namn:</li>
+      <li>Email:</li>
+      <li>Telefonnummer:</li>
+      <li>Adress:</li>
+    </ul>
 
-<div id="OmMig" class="tabcontent">
-  <h2>Om Mig</h2>
-  <p>London is the capital city of England.</p>
+    <ul class="aboutInfo">
+      <li>Jonas Hall Tibbelin</li>
+      <li>tlin.jonas@gmail.com</li>
+      <li>0762224829</li>
+      <li>Ängsgatan 12, 56793 Hok</li>
+    </ul>
 </div>
-
-<div id="Erfarenheter" class="tabcontent">
-  <h2>Erfarenheter</h2>
-  <p>Paris is the capital of France.</p>
+<h1 class="title">Erfarenheter</h1>
+<h2 class="title">Här är några av mina tidigare projekt:</h2>
+<div id="erfarenheter" class="repoBox">
+  <ul id="repos" class="repoList"></ul>
 </div>
-
-<div id="Kontakt" class="tabcontent">
-  <h2>Kontakt</h2>
+<h1 class="title">Vem är Jonas</h1>
+<div id="fördjupning" class="boxcontent">
   <p>Tokyo is the capital of Japan.</p>
 </div>
     
