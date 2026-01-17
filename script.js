@@ -1,18 +1,33 @@
-function openTab(evt, Page) {
-    var i, tabcontent, tablinks;
+let repoList = document.getElementById("repos");
 
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+function fetchRepos() {
+  fetch("https://api.github.com/users/Tibbe90/repos")
+    .then((response) => response.json())
+    .then((repos) => {
+        repos.sort((a, b) => (a.created_at < b.created_at ? 1 : -1));
+      printRepoLinks(repos);
+    });
 }
 
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+function printRepoLinks(repos) {
+  repos.forEach((repo) => {
+    let repositoryLi = document.createElement("li");
+    repositoryLi.classList.add("repoLi");
+
+    let repoLink = document.createElement("a");
+    repoLink.href = repo.html_url;
+    repoLink.textContent = repo.name;
+    repoLink.classList.add("repoLink")
+
+    let repoDescription = document.createElement("p");
+    repoDescription.innerText =
+      repo.description || "Ingen beskrivning är skapad.";
+    repoDescription.classList.add("repoDescription")
+
+    repositoryLi.appendChild(repoLink);
+    repositoryLi.appendChild(repoDescription);
+    repoList.appendChild(repositoryLi);
+  });
 }
 
-    document.getElementById(Page).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-document.getElementById("defaultOpen").click();
+fetchRepos();
