@@ -9,7 +9,7 @@ renderAbout();
 renderSkills();
 
 function fetchRepos() {
-  fetch("https://api.github.com/users/Tibbe90/repos")
+  fetch("https://api.github.com/users/Tibbe90/starred")
     .then((response) => response.json())
     .then((repos) => {
         repos.sort((a, b) => (a.created_at < b.created_at ? 1 : -1));
