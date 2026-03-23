@@ -1,43 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Levnadslopp</title>
-    <link rel="stylesheet" href="style.css">
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonas Tibbelin - CV</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
-<div>
-  <h1 class="title">Om Mig</h1>
-</div>
-<div id="omMig" class="boxcontent">
-    <ul class="aboutList">
-      <li>Namn:</li>
-      <li>Email:</li>
-      <li>Telefonnummer:</li>
-      <li>Adress:</li>
-    </ul>
+  </head>
 
-    <ul class="aboutInfo">
-      <li>Jonas Hall Tibbelin</li>
-      <li>tlin.jonas@gmail.com</li>
-      <li>0762224829</li>
-      <li>Ängsgatan 12, 56793 Hok</li>
-    </ul>
-</div>
-<h1 class="title">Erfarenheter</h1>
-<h2 class="title">Här är några av mina tidigare projekt:</h2>
-<div id="erfarenheter" class="repoBox">
-  <ul id="repos" class="repoList"></ul>
-</div>
-<h1 class="title">Vem är Jonas</h1>
-<div id="aboutMe" class="repoBox">
-</div>
-<h1>Tidigare erfarenheter från arbetslivet</h1>
-<div id="experienceList" class="boxcontent">
-</div>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Jonas Tibbelin</h1>
+        <p class="title">Blivande Javautvecklare</p>
+        <p class="subtitle">
+          Student på Jönköping Universitet, Javautveklingsprogrammet.</p>
+          <p class="subtitle">
+            Blivande
+          Javautvecklare med bakgrund inom industri och stark
+          problemlösningsförmåga. Bygger kontinuerligt projekt i Java och
+          JavaScript och drivs av att utvecklas tekniskt. Trivs i miljöer där
+          jag får ta ansvar, lära mig snabbt och bidra till fungerande
+          lösningar.
+        </p>
 
-    
-</body>
+        <h3>Kontakt</h3>
+        <div class="contact">
+          <span>tlin.jonas@gmail.com</span>
+          <span>0762224829</span>
+        </div>
+      </header>
+
+      <section>
+        <h2>Om mig</h2>
+        <div id="aboutMe"></div>
+      </section>
+
+      <section>
+        <h2>Tekniska färdigheter</h2>
+        <div id="skills" class="skills"></div>
+      </section>
+
+      <section>
+        <h2>Projekt</h2>
+        <div id="repos" class="grid"></div>
+      </section>
+
+      <section>
+        <h2>Arbetslivserfarenhet</h2>
+        <div id="experienceList"></div>
+      </section>
+    </div>
+  </body>
 </html>
