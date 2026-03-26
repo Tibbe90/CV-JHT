@@ -6,6 +6,12 @@ body {
   line-height: 1.6;
 }
 
+.header img {
+  height: 140px;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
 .container {
   max-width: 800px;
   margin: auto;
