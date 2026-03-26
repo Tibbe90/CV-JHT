@@ -56,24 +56,8 @@ function renderExperience(data) {
   });
 }
 
-function printErfarenheter(erfarenheter) {
- erfarenheter.forEach(erfarenhet => {
-  console.log(erfarenhet.Arbetstitel)
-  const experienceLi = document.createElement('li')
-  experienceLi.classList.add("repoList")
-experienceLi.innerHTML = `
-  <p>
-  Företag: ${erfarenhet.Företag}
-  Jobbtitel: ${erfarenhet.Arbetstitel}
-  Tidsperiod: ${erfarenhet.Tidsperiod}
-  </p> `
-  experienceList.appendChild(experienceLi)
- })
-}
-
 function renderAbout() {
   aboutMe.innerHTML = `
-    <p>Jag är student på Campus Värnamo på distans med inriktning Javautveckling.</p>
     <p>Jag trivs bäst när jag får lösa problem, bygga kod och lära mig nya saker.</p>
     <p>Bakgrund inom industri har gett mig stresstålighet och en bra känsla för ansvar.</p>
     <p>Privat är jag familjefar med stort intresse för natur, film och bilprojekt – när det blir lugnare kvällar hittar du mig oftast vid datorn med ett spel eller ett eget litet kodprojekt.</p>
