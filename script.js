@@ -81,7 +81,7 @@ function renderSkills() {
   });
 }
 
-function renderExperience(data) {
+async function renderExperience(data) {
   data.forEach(job => {
     const div = document.createElement("div");
     div.classList.add("job");
@@ -93,12 +93,27 @@ function renderExperience(data) {
       </div>
       <div class="company">${job.Företag}</div>
     `;
-
     experienceContainer.appendChild(div);
   });
-  const references = document.createElement("h4")
-  references.textContent = "Referenser kan delas på begäran"
+const references = document.createElement("h4")
+const getLocalRef = updateReferenses(references)
+}
+
+async function updateReferenses(references) {
+const getLocalRef = await fetch(`./referenser.md`)
+if (!getLocalRef.ok) {
+  references.innerHTML = `<P>Referenser: (Kontaktinformation finns i min skickade PDF, alternativt kontakta mig!)
+  <P>
+  William V - Teamledare på GLS <br>
+  </P>
+  <P>
+  Louise Linné - Lärare <br>
+  </P></P>`
   experienceContainer.appendChild(references)
+} else {
+  references.innerHTML = await getLocalRef.text()
+  experienceContainer.appendChild(references)
+};
 }
 
 function renderEducations(data) {
