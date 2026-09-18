@@ -9,7 +9,7 @@ const displayedRepos = [
   "Create-a-service-from-an-API-backend", 
   "login-Tibbe90",
   "Timetracker-Backend",
-  "Timetracker-Frontend"
+  "Timetracker-Frontend",
 ]
 
 displayTextLocally();
