@@ -5,6 +5,7 @@ const educationContainer = document.getElementById("educationList");
 const aboutMe = document.getElementById("aboutMe");
 const skillsContainer = document.getElementById("skills");
 const displayedRepos = [
+  "home-sense",
   "Create-a-service-from-an-API-frontend", 
   "Create-a-service-from-an-API-backend", 
   "login-Tibbe90",
