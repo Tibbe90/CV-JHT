@@ -74,7 +74,8 @@ function renderAbout() {
 }
 
 function renderSkills() {
-  const skills = ["C#", "Java", "Spring Boot", "Jakarta EE", "JavaScript", "TypeScript", "React", "Git", "SQL", "HTML", "Postman"];
+  const skills = ["Java", "Spring Boot", "Spring Security", "Jakarta EE", "REST APIs", "Websockets","MongoDB", "SQL", "JavaScript", 
+    "TypeScript", "React", "Git", "Docker", "Postman", "Arduino/IoT Uno R4 WiFi", "C#"];
 
   skills.forEach(skill => {
     const span = document.createElement("span");
